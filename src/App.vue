@@ -141,7 +141,7 @@ const totalPrice = computed(() => {
 }
 
 .product-card:hover {
-  background-color: #55e5b8b5;
+  background-color: #fae0fa7e;
 }
 
 .product-image {
@@ -174,7 +174,7 @@ const totalPrice = computed(() => {
 }
 
 .add-to-cart-btn:hover {
-  background-color: #0056b3;
+  background-color: #8f00b3;
 }
 
 .cart {
