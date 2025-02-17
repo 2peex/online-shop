@@ -1,7 +1,7 @@
 # Vue 3 + TypeScript + Vite
 
 <p align="center">
-  <img src="assets/images/screenshot.png" width="600">
+  <img src="./src/assets/images/screenshot.png" width="600">
 </p>
 
 
