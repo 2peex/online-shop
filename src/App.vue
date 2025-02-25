@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="cart" @dragover.prevent @drop="onDrop">
-        <h2 v-if="totalQuantity > 0" class="section-title">🛒 Cart ({{ totalQuantity }} items)</h2>
+        <h3 class="section-title">🛒 Cart</h3>
         <ul v-if="cart.length">
           <li v-for="item in cart" :key="item.id" class="cart-item">
             <div class="cart-item-info">
@@ -26,6 +26,7 @@
           </li>
         </ul>
         <p v-else class="empty-cart">Cart is empty</p>
+        <p v-if="totalQuantity > 0" class="section-title">{{ totalQuantity }} items</p>
         <div class="total-price">Total: ${{ totalPrice }}</div>
       </div>
     </div>
@@ -40,8 +41,8 @@ const products = ref([
   { id: 2, name: "Phone", price: 500, image: "../public/phone.jpg" },
   { id: 3, name: "Headphones", price: 200, image: "../public/headphones.jpg" },
   { id: 4, name: "Smartwatch", price: 300, image: "../public/smartw.jpg" },
-  { id: 6, name: "Smartwatch", price: 340, image: "../public/smartw.jpg" },
-  { id: 5, name: "Tablet", price: 700, image: "../public/tablet.jpg" },
+  { id: 5, name: "Smartwatch", price: 340, image: "../public/smartw.jpg" },
+  { id: 6, name: "Tablet", price: 700, image: "../public/tablet.jpg" },
  
 ]);
 
@@ -119,7 +120,7 @@ const totalPrice = computed(() => {
 }
 
 .section-title {
-  font-size: 1.5rem;
+
   font-weight: 400;
   margin-bottom: 15px;
 }
@@ -184,10 +185,12 @@ const totalPrice = computed(() => {
 .cart-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
-  background-color: #e0f7fa;
+  background-color: #3a3a3a;
   border-radius: 6px;
   margin-bottom: 10px;
+  color: #f9f9f9;
 }
 
 .cart-item-info {
@@ -200,11 +203,14 @@ const totalPrice = computed(() => {
   height: 40px;
   object-fit: cover;
   margin-right: 10px;
+  border-radius: 4px;
 }
 
 .remove-btn {
-  background-color: #dc3545;
-  color: white;
+  width: 70px;
+  height: 30px;
+  background-color: #ff3b4f;
+  color:#f9f9f9;
   padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
